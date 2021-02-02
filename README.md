@@ -9,7 +9,9 @@ Remake of frontend of my memories project
 <br>
 
  <h2/>
- This project is a practice using HTML & CSS
+ 
+ ✍️ [inspired by ](https://www.youtube.com/watch?v=ngc9gnGgUdA)👈
+ 
 </h2>
 </ strong>
 <br>
