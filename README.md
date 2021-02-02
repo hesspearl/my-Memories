@@ -24,7 +24,7 @@ Remake of frontend of my memories project
 <img align="center" alt="ReactJs" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" /> React
 <br>
 
-<img   width="20px" src="https://trello-attachments.s3.amazonaws.com/5d02107281e39c17911f5405/5fe21c12a7e07a11d45d7587/d7d618f6cc27b234c07195a60e23e393/material-ui.svg"/> Material UI for Design - GRID pattern <br>
+<img   width="20px" src="https://trello-attachments.s3.amazonaws.com/5d02107281e39c17911f5405/5fe21c12a7e07a11d45d7587/d7d618f6cc27b234c07195a60e23e393/material-ui.svg"/> Material UI  <br>
 
 <img   width="20px" src="https://trello-attachments.s3.amazonaws.com/5d02107281e39c17911f5405/5fe21c12a7e07a11d45d7587/7255e8774dcd5d82514d8cc83f42624b/redux.svg"/> Redux<br>
 <br>
