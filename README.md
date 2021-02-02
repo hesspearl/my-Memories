@@ -8,12 +8,11 @@ Remake of frontend of my memories project
 </h1> </ strong>
 <br>
 
- <h2/>
  
  ✍️ [inspired by ](https://www.youtube.com/watch?v=ngc9gnGgUdA)👈
  
-</h2>
-</ strong>
+
+
 <br>
 <p> Tools :</p >
 
@@ -47,12 +46,9 @@ Remake of frontend of my memories project
 
   <p align="center" >
 
-  <img align="center" src="https://github.com/hesspearl/Pottery-/blob/master/images/gifs/small-devices.gif"/>
+  <img align="center" src="https://github.com/hesspearl/my-Memories/blob/master/src/image/shoot.jpg"/>
   </p>
-  <p align="center" >
-
-  <img align="center" src="https://github.com/hesspearl/Pottery-/blob/master/images/gifs/website.gif"/>
-  </p>
+ 
  <br>
 
 
