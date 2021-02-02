@@ -8,28 +8,50 @@ import {
   Modal,
 } from "@material-ui/core";
 import { useStyle } from "./styles";
-import { create } from "../../store/action";
-import { useDispatch } from "react-redux";
+import { create } from "../../store/action/action";
+import { useDispatch, useSelector } from "react-redux";
 import ImageList from "./imageList";
+import { RootState } from "../../store/rootStore";
 
 const Index = () => {
   const dispatch = useDispatch();
+  const state = useSelector((state: RootState) => state.posts);
   const classes = useStyle();
   const [openModal, setOpenModal] = useState<boolean>(false);
-  const [inputs, setInputs] = useState<Inputs>({
+  const [inputs, setInputs] = useState<InputState>({
     creator: "",
     title: "",
     message: "",
     image: "",
+    id: 0,
   });
+
+  useEffect(() => {
+    setInputs({ ...inputs, id: state.length });
+  }, [state.length]);
 
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
+    if (
+      !inputs.creator.length ||
+      !inputs.title.length ||
+      !inputs.message.length ||
+      !inputs.image
+    ) {
+      return;
+    }
 
     dispatch(create(inputs));
+    setInputs({
+      creator: "",
+      title: "",
+      message: "",
+      image: "",
+      id: 0,
+    });
   };
 
-  const imageHandler = (image: String) => {
+  const imageHandler = (image: string) => {
     setInputs({ ...inputs, image: image });
   };
 
@@ -94,14 +116,27 @@ const Index = () => {
               open={openModal}
               onClose={() => setOpenModal(false)}
             >
-              <ImageList img={(e) => imageHandler(e)} />
+              <ImageList img={(e) => imageHandler(e)} setOpen={setOpenModal} />
             </Modal>
           </div>
 
           <Button color="secondary" type="submit">
             submit
           </Button>
-          <Button color="secondary">clear</Button>
+          <Button
+            color="secondary"
+            onClick={() =>
+              setInputs({
+                creator: "",
+                title: "",
+                message: "",
+                image: "",
+                id: 0,
+              })
+            }
+          >
+            clear
+          </Button>
         </form>
       </Paper>
     </Container>

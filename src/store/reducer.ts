@@ -1,14 +1,17 @@
-import { CREATE } from "./action"
+import { CREATE, actionTypes, DELETE_POST, UPDATE } from "./action/types";
 
-const posts:Inputs[]=[]
- 
+const posts: InputState[] = [];
 
+export default (state = posts, action: actionTypes): InputState[] => {
+  switch (action.type) {
+    case CREATE:
+      return [...state, action.value];
 
+    case DELETE_POST:
+      return state.filter((i) => i.id !== action.value);
 
-export default (state=posts, action:Action):Inputs[]=>{
-    switch(action.type){
-        case CREATE:
-            return [...state,action.value]
-    }
-return state
-}
+    case UPDATE:
+      return state.map((i) => (i.id === action.value.id ? action.value : i));
+  }
+  return state;
+};
