@@ -14,10 +14,16 @@ export const useStyle = makeStyles((theme: Theme) => ({
     background: theme.palette.secondary.light,
     minHeight: "110vh",
     height: "100%",
-    margin: 0,
 
     //width: "100%",
     // minWidth:"100vh"
+  },
+
+  container: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: theme.spacing(3),
   },
 }));
 function App() {
@@ -29,14 +35,17 @@ function App() {
       <div className={classes.root}>
         <Header />
         <Grid container spacing={4} direction="row-reverse">
-          <Grid item sm={12} md={5} lg={6}>
+          <Grid item sm={12} lg={5}>
             <Form />
           </Grid>
-          <Grid item sm={12} md={5} lg={6}>
+
+          <Grid item spacing={4} alignItems="stretch" xs={12} sm={12} lg={6}>
             {post.length ? (
               post.map((item, index) => (
-                <div key={index}>
-                  <Card {...item} />
+                <div className={classes.container} key={index}>
+                  <Grid item spacing={3} xs={12} sm={12} lg={12}>
+                    <Card {...item} />
+                  </Grid>
                 </div>
               ))
             ) : (

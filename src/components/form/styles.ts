@@ -3,9 +3,12 @@ import { makeStyles, Theme } from "@material-ui/core/styles";
 export const useStyle = makeStyles((theme: Theme) => ({
   paper: {
     backgroundColor: theme.palette.primary.main,
-    width: "100%",
+    // width: "100%",
 
-    margin: theme.spacing(3),
+    margin: theme.spacing(2),
+    [theme.breakpoints.down(300)]: {
+      marginTop: theme.spacing(3),
+    },
   },
   form: {
     display: "flex",
