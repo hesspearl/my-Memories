@@ -41,6 +41,12 @@ Remake of frontend of my memories project
 
 
 <br>
+
+- used typescript for coding functions and redux .
+- material ui components for desigining .
+- responsive for all sizes devices.
+
+
 <br>
 
 
@@ -50,6 +56,7 @@ Remake of frontend of my memories project
   </p>
  
  <br>
+
 
 
 
