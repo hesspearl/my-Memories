@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction } from "react";
+
 import { GridList, GridListTile } from "@material-ui/core";
 import { useStyle } from "./styles";
 

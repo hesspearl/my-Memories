@@ -2,7 +2,7 @@ import { CREATE, actionTypes, DELETE_POST, UPDATE } from "./action/types";
 
 const posts: InputState[] = [];
 
-export default (state = posts, action: actionTypes): InputState[] => {
+export  const reducer =(state = posts, action: actionTypes): InputState[] => {
   switch (action.type) {
     case CREATE:
       return [...state, action.value];
@@ -13,5 +13,5 @@ export default (state = posts, action: actionTypes): InputState[] => {
     case UPDATE:
       return state.map((i) => (i.id === action.value.id ? action.value : i));
   }
-  return state;
+ 
 };

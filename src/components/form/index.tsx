@@ -28,7 +28,7 @@ const Index = () => {
 
   useEffect(() => {
     setInputs({ ...inputs, id: state.length });
-  }, [state.length]);
+  }, [state.length, inputs]);
 
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();

@@ -1,7 +1,7 @@
 import React from "react";
 import { AppBar, Toolbar, Typography } from "@material-ui/core";
 import { useStyle } from "./style";
-import { ResolvedModuleWithFailedLookupLocations } from "typescript";
+
 
 const Index = () => {
   const classes = useStyle();

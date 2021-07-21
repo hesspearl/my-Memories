@@ -8,10 +8,6 @@ interface InputState extends Inputs {
   id: number;
 }
 
-type State = {
-  posts: Inputs[];
-};
-
 type Props = {
   img: (arg: string) => void;
   setOpen: Dispatch<SetStateAction<boolean>>;
