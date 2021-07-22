@@ -10,6 +10,7 @@ Remake of frontend of my memories project
 
  
  ✍️ [inspired by ](https://www.youtube.com/watch?v=ngc9gnGgUdA)👈
+ 📄 [DEMO](https://memories-memories.netlify.app/)
  
 
 
